@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load crispy_forms_tags %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+
+
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+  
+    <!-- Main Stylesheet File -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="contact-mf">
+                <div id="contact" class="box-shadow-full">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="title-box-2">
+                        <h5 class="title-left">
+                          Send Message Us
+                        </h5>
+                      </div>
+                      <div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <!-- <label for="name">Name</label> -->
+                                {{ form.name|as_crispy_field }}
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="email">Email</label> -->
+                                {{ form.email|as_crispy_field }}
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="message">Message</label> -->
+                                {{ form.description|as_crispy_field }}
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-box-2 pt-4 pt-md-0">
+                        <h5 class="title-left">
+                          Get in Touch
+                        </h5>
+                      </div>
+                      <div class="more-info">
+                        <p class="lead">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
+                          expedita aperiam aliquid at.
+                          Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
+                          mollitia inventore?
+                        </p>
+                        <ul class="list-ico">
+                          <li><span class="ion-ios-location"></span>Andijon, Asaka Niyozbotir MFY</li>
+                          <li><span class="ion-ios-telephone"></span> (94) 552-0600</li>
+                          <li><span class="ion-email"></span> jamshidbekwebdev@gmail.com</li>
+                        </ul>
+                      </div>
+                      <div class="socials">
+                        <ul>
+                          <li><a href="https://t.me/Jamshidbek_dev"><span class="ico-circle"><i class='bx bxl-telegram'></i></span></a></li>
+                          <li><a href="https://www.instagram.com/mr_jamboo?igsh=MTNmZjgyeTFiYmlqbw=="><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                          <li><a href="https://github.com/Jamshibdek"><span class="ico-circle"><i class='bx bxl-github'></i></span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+
+
+      <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+      <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+      <script src="{% static 'lib/popper/popper.min.js' %}"></script>
+      <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+      <script src="{% static 'lib/counterup/jquery.waypoints.min.js' %}"></script>
+      <script src="{% static 'lib/counterup/jquery.counterup.js' %}"></script>
+      <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+      <script src="{% static 'lib/typed/typed.min.js' %}"></script>
+      <!-- Contact Form JavaScript File -->
+      <script src="{% static 'contactform/contactform.js' %}"></script>
+    
+      <!-- Template Main Javascript File -->
+      <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
